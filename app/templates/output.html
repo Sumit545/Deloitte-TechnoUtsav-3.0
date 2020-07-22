@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+
+<div class="row center">
+    {% if danger is sameas true %}
+    <p style="color:red; font-size: 20px;">{{ pred}}<p> 
+    {% endif %}
+    {% if danger is sameas false %}  
+    <p style="color: green; font-size: 20px;">{{ pred}}<p>       
+    {% endif %}
+</div>
+
+
+{% endblock content %}  

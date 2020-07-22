@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+
+<div class="row center">
+    {% for statement in pred %}
+        {% if predstate[loop.index - 1] is sameas true %}
+            <p style="color:red; font-size: 20px;">{{ statement}}<p> 
+        {% endif %}
+        {% if predstate[loop.index - 1] is sameas false %}  
+            <p style="color: green; font-size: 20px;">{{ statement}}<p>       
+        {% endif %}
+    {% endfor %}
+</div>
+
+
+{% endblock content %}  

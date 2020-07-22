@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+
+
+<div class="row center">
+<form action="/predict_using_csv" method="post" enctype="multipart/form-data" >
+    <input type="file" name="csvfile" value=""> <br> <br> 
+    <input type="submit" name="" value="Submit the CSV file">
+</form>
+</div>
+
+
+{% endblock content %}  

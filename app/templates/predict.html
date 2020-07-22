@@ -1,0 +1,199 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="row">
+    <form action='/predict' method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+            <label for="f1"><b>AGE</b></label>
+            <br>
+          <input placeholder="Enter age of patient (years)" name="Age" id="f1" type="text" class="validate">
+        </div>
+        
+        <div class="input-field col s4">
+            <label for="f2"><b>Blood Urea Nirtogen</b></label>
+            <br>
+          <input placeholder="Enter BUN (mg/dL)" name="BUN" id="f2" type="text" class="validate">
+        </div>
+        
+        <div class="input-field col s4">
+            <label for="f3"><b>Serum Creatinine</b></label>
+            <br>
+          <input placeholder="Enter Creatinine (mg/dL)" name="Creatinine" id="f3" type="text" class="validate">
+        </div>
+        
+        <div class="input-field col s4">
+            <label for="f4"><b></b>Invasive diastolic arterial blood</label>
+            <br>
+          <input placeholder="Enter DiasABP (mmHg)" name="DiasABP" id="f4" type="text" class="validate">
+        </div>
+        
+        
+        <div class="input-field col s4">
+            <label for="f5"><b>Fractional inspired O2</b></label>
+            <br>
+          <input placeholder="Enter FiO2 (0-1)" name="FiO2" id="f5" type="text" class="validate">
+        </div>
+        
+        <div class="input-field col s4">
+            <label for="f6"><b>Glasgow Coma Score</b></label>
+            <br>
+          <input placeholder="Enter GCS (3-15)" name="GCS" id="f6" type="text" class="validate">
+        </div>
+        
+        <div class="input-field col s4">
+            <label for="f7"><b>Gender</b></label>
+            <br>
+          <input placeholder="Male:1 Female:0" name="Gender" id="f7" type="text" class="validate">
+        </div>
+        
+        <div class="input-field col s4">
+            <label for="f8"><b>Serum Glucose</b></label>
+            <br>
+          <input placeholder="Enter Glucose (mg/dL)" name="Glucose" id="f8" type="text" class="validate">
+        </div>
+        
+        <div class="input-field col s4">
+            <label for="f9"><b>Serum Bicarbonate</b></label>
+            <br>
+          <input placeholder="Enter HCO3 (mmol/L)" name="HCO3" id="f9" type="text" class="validate">
+        </div>
+        
+        <div class="input-field col s4">
+            <label for="f10"><b>Hematocrit %</b></label>
+            <br>
+          <input placeholder="Enter HCT:(%)" name="HCT" id="f10" type="text" class="validate">
+        </div>
+    
+        
+        <div class="input-field col s4">
+            <label for="f11"><b>Heart Rate</b></label>
+            <br>
+          <input placeholder="Enter HR (bpm)" name="HR" id="f11" type="text" class="validate">
+        </div>
+        
+        <div class="input-field col s4">
+            <label for="f12"><b>ICU Type</b></label>
+            <br>
+          <input placeholder="1:CCU 2:CSRU 3:MICU 4:SICU" name="ICUType" id="f12" type="text" class="validate">
+        </div>
+        
+        <div class="input-field col s4">
+            <label for="f13"><b>Serum Potasium</b></label>
+            <br>
+          <input placeholder="Enter K (mEq/L)" name="K" id="f13" type="text" class="validate">
+        </div>
+        
+        <div class="input-field col s4">
+            <label for="f14"><b>Mean Arterial Blood Pressure</b></label>
+            <br>
+          <input placeholder="Enter MAP (mmHg)" name="MAP" id="f14" type="text" class="validate">
+        </div>
+        
+        <div class="input-field col s4">
+
+          <label for="f15"><b>Serum Magnesium</b></label>
+            <br>
+          <input id="f15" name="Mg" placeholder="Enter Mg (mmol/L)"  type="text" class="validate">
+
+        </div>
+        
+        <div class="input-field col s4">
+
+          <label for="f15"><b>Serum Sodium</b></label>
+            <br>
+          <input id="f15" name="Na" placeholder="Enter Na (mEq/L)"  type="text" class="validate">
+
+        </div>
+        
+        <div class="input-field col s4">
+
+          <label for="f15"><b>Partial Pressure of arterial CO2</b></label>
+            <br>
+          <input id="f15" name="PACO2" placeholder="Enter PACO2 (mmHg)"  type="text" class="validate">
+
+        </div>
+        
+        <div class="input-field col s4">
+
+          <label for="f15"><b>Partial Pressure of Arterial O2</b></label>
+            <br>
+          <input id="f15" name="PaO2" placeholder="Enter PaO2 (mmHg)"  type="text" class="validate">
+
+        </div>
+        
+        <div class="input-field col s4">
+
+          <label for="f15"><b>Platelets</b></label>
+            <br>
+          <input id="f15" name="Platelets" placeholder="Enter Platelets (cells/nL)"  type="text" class="validate">
+
+        </div>
+        
+        <div class="input-field col s4">
+
+          <label for="f15"><b>Systolic Arterial Blood Presure</b></label>
+            <br>
+          <input id="f15" name="SysABP" placeholder="Enter SysABP (mmHg)"  type="text" class="validate">
+
+        </div>
+        
+        <div class="input-field col s4">
+
+          <label for="f15"><b>Body Temperature</b></label>
+            <br>
+          <input id="f15" name="Temp" placeholder="Enter Temp (°C)"  type="text" class="validate">
+
+        </div>
+        
+        <div class="input-field col s4">
+
+          <label for="f15"><b>Urinal</b></label>
+            <br>
+          <input id="f15" name="Urine" placeholder="Enter output (mL)"  type="text" class="validate">
+
+        </div>
+        
+        <div class="input-field col s4">
+
+          <label for="f15"><b>White Blood Cells count</b></label>
+            <br>
+          <input id="f15" name="WBC" placeholder="Enter WBC count (cells/nL)"  type="text" class="validate">
+
+        </div>
+        
+        <div class="input-field col s4">
+            <label for="f16"><b>Weight</b></label>
+            <br>
+          <input id="f16" name="Weight" placeholder="Enter (kgs)" type="text" class="validate">
+
+        </div>
+        
+        <div class="input-field col s4">
+            <label for="f16"><b>Arterial pH levels</b></label>
+            <br>
+          <input id="f16" name="pH" placeholder="levels (0-14)" type="text" class="validate">
+
+        </div>
+
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+      </div>
+    </form>
+      </div>
+
+    </div>
+  </div>
+
+
+    <br><br>
+  </div>
+  </div>>
+
+{% endblock content %}  
+
+  
+
